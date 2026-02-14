@@ -1,4 +1,6 @@
 {
+  "testcase": "verify that all panels are accesible",
+  "username": "Admin",
   "panel_tabs": [
     "Admin",
     "PIM",
@@ -14,3 +16,4 @@
     "Buzz"
   ]
 }
+

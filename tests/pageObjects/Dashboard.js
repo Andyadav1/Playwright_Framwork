@@ -8,14 +8,16 @@ class Dashboard extends Common {
   constructor(page) {
     super(page);
     this.page = page;
-    this.inputByName = (name) => this.page.locator(`//input[@name="${name}"]`);
+    this.login_btn = page.locator('//button[@type="submit"]');
+    this.inputByName = (name) => page.locator(`//input[@name="${name}"]`);
   }
 
   async login(username, password) {
     await this.page.goto(test_env.url);
-    await this.input_by_name("username").fill(username);
-    await this.input_by_name("password").fill(password);
-    await this.clickAnElement('//button[@type="submit"]');
+    await this.page.waitForLoadState("networkidle");
+    await this.inputByName("username").fill(username);
+    await this.inputByName("password").fill(password);
+    await this.clickAnElement(this.login_btn);
   }
 }
 export { Dashboard };

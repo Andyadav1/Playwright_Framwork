@@ -1,3 +1,4 @@
+import credentials from "../../test_data/login_credentials.json" with { type: "json" };
 export default class Common {
   /**
    *
@@ -5,12 +6,15 @@ export default class Common {
    */
   constructor(page) {
     this.page = page;
-    let panel = (tab_name) =>
+    this.banner = page.locator(`//div[@class="oxd-brand-banner"]`);
+    
+    
+    this.panel = (tab_name) =>
       page.locator(
         `//ul/li[@class="oxd-main-menu-item-wrapper"]//span[text()='${tab_name}']`,
       );
   }
-Admin
+  Admin;
   /**
    *
    * @param {import("@playwright/test").Locator} locator
@@ -18,4 +22,14 @@ Admin
   async clickAnElement(locator) {
     await locator.click();
   }
+  get_credentials(username) {
+    for (const credential in credentials){
+      if (credentials[credential].username === username){
+        return credentials[credential].password
+      }
+
+    }
+    
+  }
+
 }
