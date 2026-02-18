@@ -14,6 +14,13 @@
     "Maintenance",
     "Claim",
     "Buzz"
+  ],
+  "quick_launch_tabs": [
+    "Assign Leave",
+    "Leave List",
+    "Timesheets",
+    "Apply Leave",
+    "My Leave",
+    "My Timesheet"
   ]
 }
-

@@ -9,6 +9,9 @@ class Dashboard extends Common {
     super(page);
     this.page = page;
     this.login_btn = page.locator('//button[@type="submit"]');
+    
+    this.quick_launch = (buttom) =>
+      this.page.locator(`//button[@title="${buttom}"]`);
     this.inputByName = (name) => page.locator(`//input[@name="${name}"]`);
   }
 

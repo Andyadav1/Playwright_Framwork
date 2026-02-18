@@ -5,7 +5,7 @@ import { PageObjectManager } from "../../pageObjects/pageObjectManager";
 
 const username = test_data.username;
 let password;
-test.describe.configure({mode:'serial'})
+test.describe.configure({mode:'serial '})
 test.describe(`${test_data.testcase}`, async () => {
   let pom;
 

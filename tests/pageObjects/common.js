@@ -7,10 +7,9 @@ export default class Common {
   constructor(page) {
     this.page = page;
     this.banner = page.locator(`//div[@class="oxd-brand-banner"]`);
-    
-    
+
     this.panel = (tab_name) =>
-      page.locator(
+      this.page.locator(
         `//ul/li[@class="oxd-main-menu-item-wrapper"]//span[text()='${tab_name}']`,
       );
   }
@@ -23,13 +22,10 @@ export default class Common {
     await locator.click();
   }
   get_credentials(username) {
-    for (const credential in credentials){
-      if (credentials[credential].username === username){
-        return credentials[credential].password
+    for (const credential in credentials) {
+      if (credentials[credential].username === username) {
+        return credentials[credential].password;
       }
-
     }
-    
   }
-
 }
