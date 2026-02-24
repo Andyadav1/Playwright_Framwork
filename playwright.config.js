@@ -14,8 +14,11 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  timeout: 5*60*1000,
   use: {
     browserName: 'chromium',
+    launchOptions: {args:['--start-maximized']},
+    viewport: null,
     headless: false,
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',

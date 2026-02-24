@@ -1,19 +1,13 @@
 {
   "testcase": "verify that all panels are accesible",
-  "username": "Admin",
+  "username": "will",
   "panel_tabs": [
-    "Admin",
-    "PIM",
-    "Leave",
-    "Time",
-    "Recruitment",
-    "My Info",
-    "Performance",
-    "Dashboard",
-    "Directory",
-    "Maintenance",
-    "Claim",
-    "Buzz"
+    "Sales",
+    "Marketing",
+    "Support",
+    "Activities",
+    "Collaboration",
+    "All"
   ],
   "quick_launch_tabs": [
     "Assign Leave",
@@ -22,5 +16,8 @@
     "Apply Leave",
     "My Leave",
     "My Timesheet"
+  ],
+  "sales_section": [
+    
   ]
 }

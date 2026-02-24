@@ -1,4 +1,7 @@
+import { waitForDebugger } from "inspector/promises";
 import credentials from "../../test_data/login_credentials.json" with { type: "json" };
+import { isMarkedAsUntransferable } from "worker_threads";
+import test from "@playwright/test";
 export default class Common {
   /**
    *
@@ -6,14 +9,11 @@ export default class Common {
    */
   constructor(page) {
     this.page = page;
-    this.banner = page.locator(`//div[@class="oxd-brand-banner"]`);
-
-    this.panel = (tab_name) =>
+    this.top_panel = (tab_name) =>
       this.page.locator(
-        `//ul/li[@class="oxd-main-menu-item-wrapper"]//span[text()='${tab_name}']`,
+        `//span[@class="notCurrentTab"]/a[contains(text.,'${tab_name}')]`,
       );
   }
-  Admin;
   /**
    *
    * @param {import("@playwright/test").Locator} locator
