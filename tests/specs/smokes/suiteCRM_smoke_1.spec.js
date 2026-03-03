@@ -21,18 +21,18 @@ test.describe(`${test_data.testcase}`, async () => {
     password = pom.getHomePage().get_credentials(username);
     await pom.getHomePage().login(username, password);
   });
-  for (const panel in test_data.panel_tabs) {
-    test(`Verify that the ${
-      test_data.panel_tabs[panel]
-    } panel is accessible`, async () => {
-      pom
-        .getHomePage()
-        .clickAnElement(pom.getHomePage().panels(test_data.panel_tabs[panel]));
-      await page.waitForLoadState("networkidle");
-      await page.waitForLoadState("networkidle");
-      await expect(page.locator(`//span/h6`)).toHaveText(
-        test_data.panel_validation[panel],
-      );
-    });
+  for (const panel of test_data.top_bar) {
+    for (const Sub_tab of test_data.panel_tabs[panel]) {
+      test(`Verify that the ${panel} bar is accessible and shows the ${Sub_tab} button in its dropdown`, async () => {
+        await pom.getHomePage().top_panel(panel).hover();
+         await expect(
+           pom.getHomePage().top_sub_pane(panel, Sub_tab),
+         ).toBeVisible();
+        await pom
+          .getHomePage()
+          .clickAnElement(pom.getHomePage().top_sub_pane(panel, Sub_tab));
+        await page.waitForLoadState("networkidle");
+      });
+    }
   }
 });

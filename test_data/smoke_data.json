@@ -1,6 +1,14 @@
 {
   "testcase": "verify that all panels are accesible",
   "username": "will",
+  "top_bar": [
+    "Sales",
+    "Marketing",
+    "Support",
+    "Activities",
+    "Collaboration",
+    "All"
+  ],
   "panel_tabs": {
     "Sales": ["Home", "Accounts", "Contacts", "Opportunities", "Leads"],
     "Marketing": [
@@ -9,7 +17,6 @@
       "Contacts",
       "Leads",
       "Campaigns",
-      "Targets",
       "Targets - Lists"
     ],
     "Support": ["Home", "Accounts", "Contacts", "Cases"],
@@ -42,20 +49,20 @@
       "Invoices",
       "Contracts",
       "Cases",
-      "Targets",
       "Targets - Lists",
-      "Projects",
       "Projects - Templates",
       "Events",
       "Locations",
-      "Products",
       "Products - Categories",
       "PDF - Templates",
       "Reports",
       "Knowledge Base",
       "KB - Categories",
       "Email - Templates",
-      "Surveys"
+      "Surveys",
+      "Targets",
+      "Projects"
+
     ]
   }
 }

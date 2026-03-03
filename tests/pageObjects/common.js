@@ -11,7 +11,7 @@ export default class Common {
     this.page = page;
     this.top_panel = (tab_name) =>
       this.page.locator(
-        `//span[@class="notCurrentTab"]/a[contains(text.,'${tab_name}')]`,
+        `//span[@class="notCurrentTab"]/a[contains(text(),'${tab_name}')]`,
       );
     this.top_sub_pane = (top_panel,sub_panel) =>
       this.page.locator(
