@@ -9,11 +9,13 @@ export default class Common {
    */
   constructor(page) {
     this.page = page;
+    this.page_validation = (text) =>
+      this.page.locator(`//div/h2[contains(text(),'${text}')]`);
     this.top_panel = (tab_name) =>
       this.page.locator(
         `//span[@class="notCurrentTab"]/a[contains(text(),'${tab_name}')]`,
       );
-    this.top_sub_pane = (top_panel,sub_panel) =>
+    this.top_sub_pane = (top_panel, sub_panel) =>
       this.page.locator(
         `//span/a[contains(text(),'${top_panel}')]/../../span/ul/li/a[contains(text(),'${sub_panel}')]`,
       );

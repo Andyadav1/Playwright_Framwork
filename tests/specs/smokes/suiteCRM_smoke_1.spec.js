@@ -25,13 +25,16 @@ test.describe(`${test_data.testcase}`, async () => {
     for (const Sub_tab of test_data.panel_tabs[panel]) {
       test(`Verify that the ${panel} bar is accessible and shows the ${Sub_tab} button in its dropdown`, async () => {
         await pom.getHomePage().top_panel(panel).hover();
-         await expect(
-           pom.getHomePage().top_sub_pane(panel, Sub_tab),
-         ).toBeVisible();
+        await expect(
+          pom.getHomePage().top_sub_pane(panel, Sub_tab),
+        ).toBeVisible();
         await pom
           .getHomePage()
           .clickAnElement(pom.getHomePage().top_sub_pane(panel, Sub_tab));
         await page.waitForLoadState("networkidle");
+        if (Sub_tab != "Home") {
+          expect(pom.getHomePage().page_validation(Sub_tab)).toBeVisible();
+        }
       });
     }
   }

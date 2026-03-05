@@ -48,7 +48,6 @@
       "Notes",
       "Invoices",
       "Contracts",
-      "Cases",
       "Targets - Lists",
       "Projects - Templates",
       "Events",
@@ -61,7 +60,8 @@
       "Email - Templates",
       "Surveys",
       "Targets",
-      "Projects"
+      "Projects",
+      "Cases"
 
     ]
   }
