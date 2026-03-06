@@ -14,7 +14,7 @@ test.describe(`${test_data.testcase}`, async () => {
   /** @type {PageObjectManager} */
   let pom;
 
-  test.beforeAll("login as username", async ({ browser }) => {
+  test.beforeAll(`login as ${username}`, async ({ browser }) => {
     let context = await browser.newContext();
     page = await context.newPage();
     pom = new PageObjectManager(page);
