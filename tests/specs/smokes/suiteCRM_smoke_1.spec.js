@@ -3,8 +3,6 @@ import test_env from "../../../test_data/env.json" with { type: "json" };
 import test_data from "../../../test_data/smoke_data.json" with { type: "json" };
 import { PageObjectManager } from "../../pageObjects/pageObjectManager";
 
-import fs from "fs";
-
 const username = test_data.username;
 let password;
 test.describe.configure({ mode: "serial" });
