@@ -18,5 +18,24 @@ test.describe(`${test_data.testcase}`, async () => {
     password = pom.getHomePage().get_credentials(username);
     await pom.getHomePage().login(username, password);
   });
-  test.
+  test(`go to the accounts page and vlidate the filter function`, async () => {
+    await pom.getAccountPage().top_panel("Sales").hover();
+    await expect(
+      pom.getAccountPage().top_sub_pane("Sales", "Accounts"),
+    ).toBeVisible();
+    await pom
+      .getAccountPage()
+      .clickAnElement(pom.getAccountPage().top_sub_pane("Sales", "Accounts"));
+    await page.waitForLoadState("networkidle");
+    await pom
+      .getAccountPage()
+      .clickAnElement(pom.getAccountPage().sort_by("Name"));
+    await page.waitForLoadState("networkidle");
+    let initialList = await pom
+      .getAccountPage()
+      .get_list("name")
+      .allTextContents();
+    let sortecdlist = await initialList.sort();
+    expect(sortecdlist).toEqual(sortecdlist);
+  });
 });

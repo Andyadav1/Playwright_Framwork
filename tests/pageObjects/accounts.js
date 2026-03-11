@@ -7,10 +7,11 @@ class Accounts extends Common {
   constructor(page) {
     super(page);
     this.page = page;
-    this.sot_by = (text) =>
+    this.sort_by = (text) =>
       this.page.locator(
         `//div/a[contains(text(),'${text}')]/span`,
       );
     this.get_list = (text)=> this.page.locator(`//td[@type="${text}"]//a`)
   }
 }
+export {Accounts}
