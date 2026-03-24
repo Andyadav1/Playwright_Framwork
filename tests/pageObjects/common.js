@@ -34,4 +34,8 @@ export default class Common {
       }
     }
   }
+  async navigateto(panel, tab) {
+    await this.top_panel(panel).hover();
+    await this.clickAnElement(this.top_sub_pane(panel, tab));
+  }
 }
