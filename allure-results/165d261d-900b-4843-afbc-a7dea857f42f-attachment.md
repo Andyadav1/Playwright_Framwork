@@ -1,0 +1,301 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic:
+    - navigation [ref=e2]:
+      - generic [ref=e3]:
+        - text: + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+        - list [ref=e5]:
+          - listitem [ref=e6]:
+            - link "" [ref=e7] [cursor=pointer]:
+              - /url: index.php?module=Home&action=index
+          - listitem [ref=e8]:
+            - link "Accounts" [ref=e10] [cursor=pointer]:
+              - /url: index.php?module=Accounts&action=index
+          - listitem [ref=e11]:
+            - link "Sales" [ref=e13] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e14]:
+            - link "Marketing" [ref=e16] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e17]:
+            - link "Support" [ref=e19] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e20]:
+            - link "Activities" [ref=e22] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e23]:
+            - link "Collaboration" [ref=e25] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e26]:
+            - link "All" [ref=e28] [cursor=pointer]:
+              - /url: "#"
+        - text:            
+        - list [ref=e30]:
+          - listitem [ref=e31]:
+            - generic [ref=e32] [cursor=pointer]:
+              - text: CREATE
+              - generic [ref=e33]: 
+          - listitem:  
+          - listitem [ref=e34]:
+            - generic [ref=e36]:
+              - textbox "Search..." [ref=e37]
+              - button "" [ref=e39] [cursor=pointer]
+          - listitem [ref=e40]:
+            - button "" [ref=e41] [cursor=pointer]
+          - listitem [ref=e42]:
+            - button " Will Westin " [expanded] [ref=e43] [cursor=pointer]:
+              - generic [ref=e44]: 
+              - generic [ref=e45]: Will Westin
+              - generic [ref=e46]: 
+    - generic:
+      - generic [ref=e48] [cursor=pointer]: 
+      - generic [ref=e49]:
+        - list [ref=e51]:
+          - link " Create Account" [ref=e52] [cursor=pointer]:
+            - /url: index.php?module=Accounts&action=EditView&return_module=Accounts&return_action=index
+            - generic [ref=e54]: 
+            - generic [ref=e55]: Create Account
+          - link " View Accounts" [ref=e56] [cursor=pointer]:
+            - /url: index.php?module=Accounts&action=index&return_module=Accounts&return_action=DetailView
+            - generic [ref=e58]: 
+            - generic [ref=e59]: View Accounts
+          - link " Import Accounts" [ref=e60] [cursor=pointer]:
+            - /url: index.php?module=Import&action=Step1&import_module=Accounts&return_module=Accounts&return_action=index
+            - generic [ref=e62]: 
+            - generic [ref=e63]: Import Accounts
+        - generic:
+          - list
+        - generic:
+          - list
+  - generic [ref=e65]:
+    - generic [ref=e66]:
+      - text: We hope you enjoy this demo of SuiteCRM, the world’s number one Open Source CRM
+      - text: Ready to take the next step?
+      - link "Arrange a private demo" [ref=e67] [cursor=pointer]:
+        - /url: https://suitecrm.com/about/about-us/contact/
+      - text: with one of our experts today.
+    - generic [ref=e68]:
+      - generic [ref=e69]:
+        - heading "Accounts" [level=2] [ref=e70]
+        - text: 
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - table [ref=e74]:
+            - rowgroup [ref=e75]:
+              - row "Name  City  Billing Country  Phone  User  Email Address Date Created " [ref=e76]:
+                - columnheader [ref=e77]
+                - columnheader [ref=e78]
+                - columnheader "Name " [ref=e79]:
+                  - link "Name " [ref=e81] [cursor=pointer]:
+                    - /url: javascript:sListView.order_checks("ASC", "name" , "Accounts2_ACCOUNT_ORDER_BY")
+                    - text: Name
+                    - generic "Sort" [ref=e82]: 
+                - columnheader "City " [ref=e83]:
+                  - link "City " [ref=e85] [cursor=pointer]:
+                    - /url: javascript:sListView.order_checks("ASC", "billing_address_city" , "Accounts2_ACCOUNT_ORDER_BY")
+                    - text: City
+                    - generic "Sort" [ref=e86]: 
+                - columnheader "Billing Country " [ref=e87]:
+                  - link "Billing Country " [ref=e89] [cursor=pointer]:
+                    - /url: javascript:sListView.order_checks("ASC", "billing_address_country" , "Accounts2_ACCOUNT_ORDER_BY")
+                    - text: Billing Country
+                    - generic "Sort" [ref=e90]: 
+                - columnheader "Phone " [ref=e91]:
+                  - link "Phone " [ref=e93] [cursor=pointer]:
+                    - /url: javascript:sListView.order_checks("ASC", "phone_office" , "Accounts2_ACCOUNT_ORDER_BY")
+                    - text: Phone
+                    - generic "Sort" [ref=e94]: 
+                - columnheader "User " [ref=e95]:
+                  - link "User " [ref=e97] [cursor=pointer]:
+                    - /url: javascript:sListView.order_checks("ASC", "assigned_user_name" , "Accounts2_ACCOUNT_ORDER_BY")
+                    - text: User
+                    - generic "Sort" [ref=e98]: 
+                - columnheader "Email Address" [ref=e99]:
+                  - generic [ref=e100]: Email Address
+                - columnheader "Date Created " [ref=e101]:
+                  - link "Date Created " [ref=e103] [cursor=pointer]:
+                    - /url: javascript:sListView.order_checks("ASC", "date_entered" , "Accounts2_ACCOUNT_ORDER_BY")
+                    - text: Date Created
+                    - generic "Sorted Descending" [ref=e104]: 
+                - columnheader [ref=e105]
+              - table [ref=e106]:
+                - rowgroup [ref=e107]:
+                  - row " BULK ACTION   ⨯    (1 - 2 of 2)  " [ref=e108]:
+                    - cell " BULK ACTION   ⨯ " [ref=e109]:
+                      - list [ref=e110]:
+                        - listitem [ref=e111] [cursor=pointer]:
+                          - generic [ref=e112]:
+                            - text: 
+                            - generic [ref=e113]: 
+                          - link [ref=e114]:
+                            - /url: "javascript: void(0);"
+                      - text:  
+                      - link "BULK ACTION" [ref=e116] [cursor=pointer]:
+                        - /url: javascript:void(0)
+                        - text: 
+                        - generic [ref=e117]:
+                          - text: BULK ACTION
+                          - generic [ref=e118]: 
+                      - list [ref=e119]:
+                        - listitem [ref=e120] [cursor=pointer]:
+                          - link "" [ref=e121]:
+                            - /url: javascript:void(0)
+                      - list [ref=e122]:
+                        - listitem [ref=e123] [cursor=pointer]:
+                          - link "" [ref=e124]:
+                            - /url: javascript:void(0)
+                          - link "⨯" [ref=e125]:
+                            - /url: javascript:void(0)
+                        - text:  
+                      - list [ref=e126]:
+                        - listitem [ref=e127] [cursor=pointer]:
+                          - link "" [ref=e128]:
+                            - /url: "#"
+                    - cell " " [ref=e129]:
+                      - button "" [disabled] [ref=e130]:
+                        - generic [ref=e131]: 
+                      - button "" [disabled] [ref=e132]:
+                        - generic [ref=e133]: 
+                    - cell "(1 - 2 of 2)" [ref=e134]:
+                      - generic [ref=e135]: (1 - 2 of 2)
+                    - cell " " [ref=e136]:
+                      - button "" [disabled] [ref=e137]:
+                        - generic [ref=e138]: 
+                      - button "" [disabled] [ref=e139]:
+                        - generic [ref=e140]: 
+                    - cell [ref=e141]
+            - rowgroup [ref=e142]:
+              - row "Select this row  Avery Software Co Ohio USA (963) 558-4497 Sarah Smith beans.hr.support@example.cn 03/25/2026 14:00 " [ref=e143]:
+                - cell "Select this row" [ref=e144]:
+                  - checkbox "Select this row" [ref=e145]
+                - cell "" [ref=e146]:
+                  - link "" [ref=e147] [cursor=pointer]:
+                    - /url: index.php?module=Accounts&offset=1&stamp=1774450518066570000&return_module=Accounts&action=EditView&record=1277b90e-e84d-4153-8d7e-8941bcd73f33
+                    - generic [ref=e148]: 
+                - cell "Avery Software Co" [ref=e149] [cursor=pointer]:
+                  - link "Avery Software Co" [ref=e151]:
+                    - /url: index.php?module=Accounts&offset=1&stamp=1774450518066570000&return_module=Accounts&action=DetailView&record=1277b90e-e84d-4153-8d7e-8941bcd73f33
+                - cell "Ohio" [ref=e153] [cursor=pointer]: Ohio
+                - cell "USA" [ref=e155] [cursor=pointer]: USA
+                - cell "(963) 558-4497" [ref=e157] [cursor=pointer]:
+                  - link "(963) 558-4497" [ref=e158]:
+                    - /url: tel:(963) 558-4497
+                - cell "Sarah Smith" [ref=e160] [cursor=pointer]:
+                  - link "Sarah Smith" [ref=e161]:
+                    - /url: index.php?module=Employees&offset=1&stamp=1774450518066570000&return_module=Employees&action=DetailView&record=seed_sarah_id
+                - cell "beans.hr.support@example.cn" [ref=e163] [cursor=pointer]:
+                  - link "beans.hr.support@example.cn" [ref=e164]:
+                    - /url: mailto:beans.hr.support@example.cn
+                - cell "03/25/2026 14:00" [ref=e166]
+                - cell "" [ref=e167]:
+                  - generic "Additional Details" [ref=e169]: 
+              - row "Select this row  Avery Software Co Sunnyvale USA (539) 203-7295 Max Jensen section.im.dev@example.us 03/25/2026 14:00 " [ref=e170]:
+                - cell "Select this row" [ref=e171]:
+                  - checkbox "Select this row" [ref=e172]
+                - cell "" [ref=e173]:
+                  - link "" [ref=e174] [cursor=pointer]:
+                    - /url: index.php?module=Accounts&offset=2&stamp=1774450518066570000&return_module=Accounts&action=EditView&record=abe507a4-da8b-4a2e-94ff-1a53e6ab6e9c
+                    - generic [ref=e175]: 
+                - cell "Avery Software Co" [ref=e176] [cursor=pointer]:
+                  - link "Avery Software Co" [ref=e178]:
+                    - /url: index.php?module=Accounts&offset=2&stamp=1774450518066570000&return_module=Accounts&action=DetailView&record=abe507a4-da8b-4a2e-94ff-1a53e6ab6e9c
+                - cell "Sunnyvale" [ref=e180] [cursor=pointer]: Sunnyvale
+                - cell "USA" [ref=e182] [cursor=pointer]: USA
+                - cell "(539) 203-7295" [ref=e184] [cursor=pointer]:
+                  - link "(539) 203-7295" [ref=e185]:
+                    - /url: tel:(539) 203-7295
+                  - img [ref=e187]
+                - cell "Max Jensen" [ref=e188] [cursor=pointer]:
+                  - link "Max Jensen" [ref=e189]:
+                    - /url: index.php?module=Employees&offset=2&stamp=1774450518066570000&return_module=Employees&action=DetailView&record=seed_max_id
+                - cell "section.im.dev@example.us" [ref=e191] [cursor=pointer]:
+                  - link "section.im.dev@example.us" [ref=e192]:
+                    - /url: mailto:section.im.dev@example.us
+                - cell "03/25/2026 14:00" [ref=e194]
+                - cell "" [ref=e195]:
+                  - generic "Additional Details" [ref=e197]: 
+            - rowgroup [ref=e198]:
+              - table [ref=e199]:
+                - rowgroup [ref=e200]:
+                  - row " BULK ACTION   ⨯    (1 - 2 of 2)  " [ref=e201]:
+                    - cell " BULK ACTION   ⨯ " [ref=e202]:
+                      - list [ref=e203]:
+                        - listitem [ref=e204] [cursor=pointer]:
+                          - generic [ref=e205]:
+                            - text: 
+                            - generic [ref=e206]: 
+                          - link [ref=e207]:
+                            - /url: "javascript: void(0);"
+                      - text:  
+                      - link "BULK ACTION" [ref=e209] [cursor=pointer]:
+                        - /url: javascript:void(0)
+                        - text: 
+                        - generic [ref=e210]:
+                          - text: BULK ACTION
+                          - generic [ref=e211]: 
+                      - list [ref=e212]:
+                        - listitem [ref=e213] [cursor=pointer]:
+                          - link "" [ref=e214]:
+                            - /url: javascript:void(0)
+                      - list [ref=e215]:
+                        - listitem [ref=e216] [cursor=pointer]:
+                          - link "" [ref=e217]:
+                            - /url: javascript:void(0)
+                          - link "⨯" [ref=e218]:
+                            - /url: javascript:void(0)
+                        - text:  
+                      - list [ref=e219]:
+                        - listitem [ref=e220] [cursor=pointer]:
+                          - link "" [ref=e221]:
+                            - /url: "#"
+                    - cell " " [ref=e222]:
+                      - button "" [disabled] [ref=e223]:
+                        - generic [ref=e224]: 
+                      - button "" [disabled] [ref=e225]:
+                        - generic [ref=e226]: 
+                    - cell "(1 - 2 of 2)" [ref=e227]:
+                      - generic [ref=e228]: (1 - 2 of 2)
+                    - cell " " [ref=e229]:
+                      - button "" [disabled] [ref=e230]:
+                        - generic [ref=e231]: 
+                      - button "" [disabled] [ref=e232]:
+                        - generic [ref=e233]: 
+                    - cell [ref=e234]
+          - text: 
+        - generic [ref=e235]:
+          - generic:
+            - table [ref=e236]:
+              - rowgroup [ref=e237]:
+                - 'row "Security Groups: Mass Assign" [ref=e238]':
+                  - 'cell "Security Groups: Mass Assign" [ref=e239]':
+                    - 'heading "Security Groups: Mass Assign" [level=3] [ref=e240]'
+                  - cell [ref=e241]
+            - table [ref=e242]:
+              - rowgroup [ref=e243]:
+                - row "Assign Remove" [ref=e244]:
+                  - cell "Assign Remove" [ref=e245]:
+                    - button "Assign" [ref=e246] [cursor=pointer]
+                    - button "Remove" [ref=e247] [cursor=pointer]
+            - table [ref=e248]:
+              - rowgroup [ref=e249]:
+                - 'row "Group: --None--" [ref=e250]':
+                  - 'cell "Group: --None--" [ref=e251]':
+                    - table [ref=e252]:
+                      - rowgroup [ref=e253]:
+                        - 'row "Group: --None--" [ref=e254]':
+                          - cell "Group:" [ref=e255]
+                          - cell "--None--" [ref=e256]:
+                            - combobox [ref=e257]:
+                              - option "--None--" [selected]
+  - contentinfo [ref=e258]:
+    - generic [ref=e260]: © Supercharged by SuiteCRM © Powered By SugarCRM
+    - generic [ref=e261]:
+      - generic [ref=e262]: 
+      - text: "Server response time: 0.04 seconds."
+    - link "Back to top" [ref=e264] [cursor=pointer]:
+      - /url: javascript:void(0)
+      - text: Back to top
+      - generic [ref=e265]: 
+```
