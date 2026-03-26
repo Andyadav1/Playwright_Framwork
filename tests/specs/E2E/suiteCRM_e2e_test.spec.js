@@ -18,7 +18,7 @@ test.describe(`${test_data.testcase}`, async () => {
     password = pom.getHomePage().get_credentials(username);
     await pom.getHomePage().login(username, password);
   });
-  test.only(`go to the accounts page and vlidate the sort function`, async () => {
+  test(`go to the accounts page and vlidate the sort function`, async () => {
     await pom.getAccountPage().top_panel("Sales").hover();
     await expect(
       pom.getAccountPage().top_sub_pane("Sales", "Accounts"),
