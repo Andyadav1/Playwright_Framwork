@@ -18,7 +18,7 @@ test.describe(`${test_data.testcase}`, async () => {
     password = pom.getHomePage().get_credentials(username);
     await pom.getHomePage().login(username, password);
   });
-  test(`go to the accounts page and vlidate the sort function`, async () => {
+  test.only(`go to the accounts page and vlidate the sort function`, async () => {
     await pom.getAccountPage().top_panel("Sales").hover();
     await expect(
       pom.getAccountPage().top_sub_pane("Sales", "Accounts"),
@@ -35,10 +35,10 @@ test.describe(`${test_data.testcase}`, async () => {
       .getAccountPage()
       .get_list("name")
       .allTextContents();
-    let sortecdlist = await initialList.sort();
-    expect(sortecdlist).toEqual(sortecdlist);
+    let sortecdlist = initialList.sort();
+    expect(sortecdlist).toEqual(initialList);
   });
-  test.only(`go to the Accounts page and verify the filter function`, async () => {
+  test(`go to the Accounts page and verify the filter function`, async () => {
     await pom.getAccountPage().navigateto("Sales", "Accounts");
     await pom.getAccountPage().clickAnElement(pom.getAccountPage().filter_btn);
     await pom.getAccountPage().name_filter.fill("Avery Software Co");
