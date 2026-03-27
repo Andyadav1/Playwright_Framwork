@@ -23,7 +23,7 @@ export default defineConfig({
   use: {
     browserName: "chromium",
     launchOptions: { args: ["--start-maximized"] },
-    viewport: null,
+    viewport: {"width":1920,"height":1080}},
     headless: true,
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
